@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Social Meta Tags -->
+  <title>Aka Foods | Authentic Nigerian & Intercontinental Cuisine in Awka</title>
+  <meta name="description" content="Aka Foods offers delicious Nigerian local dishes, soups, swallow, grills, and intercontinental meals in Awka, Anambra State. Order conveniently via WhatsApp!">
+  <meta name="keywords" content="Aka Foods, Awka restaurant, Nigerian food Awka, Anambra restaurants, Jollof Rice Awka, Pepper Soup, Order food WhatsApp Awka">
+  <meta name="author" content="Aka Foods">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Aka Foods | Authentic Nigerian & Intercontinental Cuisine">
+  <meta property="og:description" content="Taste the goodness of authentic meals prepared with fresh ingredients in Awka. Place your order on WhatsApp today!">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1200&q=80">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Aka Foods | Authentic Nigerian Cuisine in Awka">
+  <meta property="twitter:description" content="Order delicious local and intercontinental dishes via WhatsApp in Awka, Anambra State.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              green: '#173F35',
+              greenDark: '#0f2c25',
+              gold: '#D99A2B',
+              goldHover: '#b87f1e',
+              terracotta: '#A9472B',
+              cream: '#FFF8ED',
+              creamDark: '#F7EEDD',
+              charcoal: '#242424',
+              muted: '#666666'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet & Overrides -->
+  <style>
+    :root {
+      --bg-cream: #FFF8ED;
+      --brand-green: #173F35;
+      --brand-gold: #D99A2B;
+      --brand-terracotta: #A9472B;
+    }
+
+    body {
+      background-color: var(--bg-cream);
+      color: #242424;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Scroll Margin Offset for Fixed Navbar Header */
+    section {
+      scroll-margin-top: 5rem;
+    }
+
+    /* Custom Preloader Fade Animation */
+    #preloader {
+      transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+    }
+
+    /* African Geometric Subtle Background Pattern */
+    .bg-pattern {
+      background-color: #173F35;
+      background-image: radial-gradient(#D99A2B 0.75px, transparent 0.75px), radial-gradient(#D99A2B 0.75px, #173F35 0.75px);
+      background-size: 30px 30px;
+      background-position: 0 0,15px 15px;
+      background-opacity: 0.08;
+    }
+
+    .bg-pattern-light {
+      background-color: #FFF8ED;
+      background-image: radial-gradient(#173F35 0.5px, transparent 0.5px);
+      background-size: 20px 20px;
+    }
+
+    /* Scroll Animations */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Floating WhatsApp Pulse Effect */
+    @keyframes pulse-ring {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+      70% { transform: scale(1); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+
+    .whatsapp-pulse {
+      animation: pulse-ring 2s infinite;
+    }
+
+    /* Custom Scrollbar Styling */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FFF8ED;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #173F35;
+      border-radius: 5px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #D99A2B;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-brand-gold selection:text-white">
+
+  <!-- ========================================== -->
+  <!-- PRELOADER                                  -->
+  <!-- ========================================== -->
+  <div id="preloader" class="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-brand-green text-brand-cream">
+    <div class="relative flex flex-col items-center">
+      <!-- Animated Logo Icon -->
+      <div class="w-20 h-20 mb-4 rounded-full border-2 border-brand-gold flex items-center justify-center animate-bounce bg-brand-greenDark shadow-xl">
+        <i class="fa-solid fa-utensils text-3xl text-brand-gold"></i>
+      </div>
+      <h1 class="font-serif text-3xl md:text-4xl font-bold tracking-wider text-brand-cream mb-1">AKA FOODS</h1>
+      <p class="text-xs tracking-widest text-brand-gold uppercase mb-6 font-semibold">Awka • Anambra State</p>
+      
+      <!-- Progress Bar Spinner -->
+      <div class="w-48 h-1.5 bg-brand-greenDark rounded-full overflow-hidden">
+        <div class="w-full h-full bg-brand-gold origin-left animate-[pulse_1s_infinite]"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ========================================== -->
+  <!-- NAVIGATION BAR                             -->
+  <!-- ========================================== -->
+  <header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4 px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="#home" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-full bg-brand-gold flex items-center justify-center text-brand-green font-bold text-lg shadow-md group-hover:scale-105 transition-transform">
+          <i class="fa-solid fa-bowl-food"></i>
+        </div>
+        <div class="flex flex-col">
+          <span id="nav-logo-text" class="font-serif text-2xl font-extrabold tracking-tight text-white transition-colors duration-300">AKA FOODS</span>
+          <span class="text-[9px] tracking-widest text-brand-gold uppercase font-bold -mt-1">Delicacies</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden lg:flex items-center gap-8 font-medium text-sm">
+        <a href="#home" class="nav-link text-white hover:text-brand-gold transition-colors py-1 border-b-2 border-transparent">Home</a>
+        <a href="#about" class="nav-link text-white hover:text-brand-gold transition-colors py-1 border-b-2 border-transparent">About Us</a>
+        <a href="#menu" class="nav-link text-white hover:text-brand-gold transition-colors py-1 border-b-2 border-transparent">Our Menu</a>
+        <a href="#why-us" class="nav-link text-white hover:text-brand-gold transition-colors py-1 border-b-2 border-transparent">Why Choose Us</a>
+        <a href="#gallery" class="nav-link text-white hover:text-brand-gold transition-colors py-1 border-b-2 border-transparent">Gallery</a>
+        <a href="#contact" class="nav-link text-white hover:text-brand-gold transition-colors py-1 border-b-2 border-transparent">Contact</a>
+      </nav>
+
+      <!-- WhatsApp CTA Button (Desktop) -->
+      <div class="hidden lg:block">
+        <a href="https://wa.me/2348160900277?text=Hello%20Aka%20Foods,%20I%20would%20like%20to%20place%20an%20order." 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 bg-brand-gold hover:bg-brand-goldHover text-brand-greenDark font-bold px-5 py-2.5 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 text-sm">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span>Order on WhatsApp</span>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-btn" class="lg:hidden text-white text-2xl focus:outline-none p-2 rounded-lg" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars" id="hamburger-icon"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer Overlay & Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-brand-greenDark/95 backdrop-blur-md z-50 flex flex-col justify-between p-8 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden">
+      <div class="flex items-center justify-between border-b border-white/10 pb-6">
+        <a href="#home" class="flex items-center gap-2" onclick="toggleMobileMenu()">
+          <div class="w-9 h-9 rounded-full bg-brand-gold flex items-center justify-center text-brand-green font-bold">
+            <i class="fa-solid fa-bowl-food"></i>
+          </div>
+          <span class="font-serif text-2xl font-bold text-brand-cream">AKA FOODS</span>
+        </a>
+        <button onclick="toggleMobileMenu()" class="text-white text-2xl p-2 focus:outline-none" aria-label="Close Menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <nav class="flex flex-col gap-6 text-center text-lg font-medium text-brand-cream py-8">
+        <a href="#home" onclick="toggleMobileMenu()" class="hover:text-brand-gold transition-colors">Home</a>
+        <a href="#about" onclick="toggleMobileMenu()" class="hover:text-brand-gold transition-colors">About Us</a>
+        <a href="#menu" onclick="toggleMobileMenu()" class="hover:text-brand-gold transition-colors">Menu</a>
+        <a href="#why-us" onclick="toggleMobileMenu()" class="hover:text-brand-gold transition-colors">Why Us</a>
+        <a href="#gallery" onclick="toggleMobileMenu()" class="hover:text-brand-gold transition-colors">Gallery</a>
+        <a href="#contact" onclick="toggleMobileMenu()" class="hover:text-brand-gold transition-colors">Contact</a>
+      </nav>
+
+      <div class="pt-6 border-t border-white/10 flex flex-col items-center gap-4">
+        <a href="https://wa.me/2348160900277?text=Hello%20Aka%20Foods,%20I%20would%20like%20to%20place%20an%20order." 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="w-full text-center flex items-center justify-center gap-2 bg-brand-gold hover:bg-brand-goldHover text-brand-greenDark font-bold px-6 py-3.5 rounded-full shadow-lg text-base">
+          <i class="fa-brands fa-whatsapp text-xl"></i>
+          <span>Order on WhatsApp</span>
+        </a>
+        <p class="text-xs text-brand-cream/60">📍 Awka, Anambra State, Nigeria</p>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ========================================== -->
+  <!-- HERO SECTION                               -->
+  <!-- ========================================== -->
+  <section id="home" class="relative min-h-screen flex items-center justify-center pt-24 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden bg-brand-green">
+    <!-- Hero Background Image Overlay -->
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1920&q=80" 
+           alt="Delicious Nigerian Dishes Spread" 
+           class="w-full h-full object-cover object-center transform scale-105 transition-transform duration-10000">
+      <div class="absolute inset-0 bg-gradient-to-r from-brand-greenDark/95 via-brand-green/85 to-brand-greenDark/75"></div>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 max-w-5xl mx-auto text-center text-white mt-8">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-gold/20 border border-brand-gold/40 backdrop-blur-md mb-6 animate-pulse">
+        <i class="fa-solid fa-fire text-brand-gold text-xs"></i>
+        <span class="text-xs sm:text-sm font-semibold tracking-widest text-brand-gold uppercase">WELCOME TO AKA FOODS</span>
+      </div>
+      
+      <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight mb-6 text-brand-cream">
+        Taste the Goodness of <span class="text-brand-gold italic">Authentic</span> Nigerian & Intercontinental Cuisine
+      </h1>
+      
+      <p class="text-base sm:text-xl text-brand-cream/90 max-w-3xl mx-auto mb-10 font-normal leading-relaxed">
+        Deliciously prepared meals, made with fresh local ingredients and served with love right here in <strong class="text-brand-gold">Awka, Anambra State</strong>.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+        <a href="#menu" class="w-full sm:w-auto px-8 py-4 bg-brand-gold hover:bg-brand-goldHover text-brand-greenDark font-bold rounded-full shadow-2xl hover:shadow-brand-gold/20 transition-all transform hover:-translate-y-1 text-base text-center">
+          <i class="fa-solid fa-utensils mr-2"></i> Explore Our Menu
+        </a>
+        <a href="https://wa.me/2348160900277?text=Hello%20Aka%20Foods,%20I%20would%20like%20to%20place%20an%20order." 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="w-full sm:w-auto px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-full shadow-2xl hover:shadow-emerald-600/30 transition-all transform hover:-translate-y-1 text-base text-center flex items-center justify-center gap-2 border border-emerald-500/30">
+          <i class="fa-brands fa-whatsapp text-xl"></i> Order on WhatsApp
+        </a>
+      </div>
+
+      <!-- Quick Trust Highlights -->
+      <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 border-t border-white/10 pt-8 max-w-4xl mx-auto">
+        <div class="flex flex-col items-center">
+          <span class="font-serif text-2xl font-bold text-brand-gold">100% Fresh</span>
+          <span class="text-xs text-brand-cream/70">Daily Fresh Ingredients</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="font-serif text-2xl font-bold text-brand-gold">Fast Delivery</span>
+          <span class="text-xs text-brand-cream/70">Prompt Awka Service</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="font-serif text-2xl font-bold text-brand-gold">Rich Menu</span>
+          <span class="text-xs text-brand-cream/70">Local & Continental</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="font-serif text-2xl font-bold text-brand-gold">Easy Payment</span>
+          <span class="text-xs text-brand-cream/70">Direct Bank Transfer</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Down Indicator -->
+    <a href="#about" class="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-white/70 hover:text-brand-gold transition-colors animate-bounce flex flex-col items-center gap-1 text-xs">
+      <span>Scroll Down</span>
+      <i class="fa-solid fa-chevron-down"></i>
+    </a>
+  </section>
+
+
+  <!-- ========================================== -->
+  <!-- ABOUT SECTION                              -->
+  <!-- ========================================== -->
+  <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-brand-cream">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        
+        <!-- Left Image Composition -->
+        <div class="relative reveal">
+          <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" 
+                 alt="Aka Foods Gourmet Dishes" 
+                 class="w-full h-[400px] sm:h-[500px] object-cover hover:scale-105 transition-transform duration-700">
+          </div>
+          
+          <!-- Secondary Decorative Badge -->
+          <div class="absolute -bottom-6 -right-4 sm:bottom-6 sm:-right-6 z-20 bg-brand-green text-brand-cream p-6 rounded-2xl shadow-xl max-w-[220px] border-2 border-brand-gold hidden sm:block">
+            <p class="font-serif text-3xl font-bold text-brand-gold">100%</p>
+            <p class="text-xs font-semibold leading-snug mt-1">Authentic Nigerian Local & Continental Recipes</p>
+          </div>
+
+          <!-- Subtle Background Frame Offset -->
+          <div class="absolute -top-4 -left-4 w-full h-full border-2 border-brand-gold rounded-2xl z-0 hidden sm:block"></div>
+        </div>
+
+        <!-- Right Content -->
+        <div class="reveal">
+          <div class="flex items-center gap-2 text-brand-terracotta font-semibold text-sm uppercase tracking-wider mb-2">
+            <i class="fa-solid fa-heart"></i>
+            <span>Our Culinary Story</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-brand-green mb-6 leading-tight">
+            Good Food. Great Taste. <span class="italic text-brand-gold">Made With Love.</span>
+          </h2>
+          <p class="text-brand-muted text-base leading-relaxed mb-6">
+            Located in the heart of <strong>Awka, Anambra State</strong>, <strong class="text-brand-green">AKA FOODS</strong> is dedicated to satisfying your cravings with wholesome, flavorful, and hygienic meals. From our rich traditional soups and swallows to perfectly spiced grills and intercontinental favorites, every meal is crafted to give you a comforting home-cooked experience.
+          </p>
+          <p class="text-brand-muted text-base leading-relaxed mb-8">
+            We prioritize high-quality fresh ingredients, authentic spice blends, and swift customer satisfaction. Ordering your favorite meal in Awka has never been easier—simply tap our WhatsApp link, select your dish, and enjoy prompt meal fulfillment!
+          </p>
+
+          <!-- Feature Cards Grid -->
+          <div class="grid grid-cols-2 gap-4 mb-8">
+            <div class="p-4 rounded-xl bg-white border border-brand-gold/20 shadow-sm flex items-start gap-3">
+              <div class="text-brand-gold text-xl mt-1"><i class="fa-solid fa-leaf"></i></div>
+              <div>
+                <h4 class="font-bold text-brand-green text-sm">Fresh Ingredients</h4>
+                <p class="text-xs text-brand-muted mt-0.5">Sourced daily from top local farmers.</p>
+              </div>
+            </div>
+            <div class="p-4 rounded-xl bg-white border border-brand-gold/20 shadow-sm flex items-start gap-3">
+              <div class="text-brand-gold text-xl mt-1"><i class="fa-solid fa-earth-africa"></i></div>
+              <div>
+                <h4 class="font-bold text-brand-green text-sm">Local & Global</h4>
+                <p class="text-xs text-brand-muted mt-0.5">Diverse options for all tastebuds.</p>
+              </div>
+            </div>
+            <div class="p-4 rounded-xl bg-white border border-brand-gold/20 shadow-sm flex items-start gap-3">
+              <div class="text-brand-gold text-xl mt-1"><i class="fa-solid fa-medal"></i></div>
+              <div>
+                <h4 class="font-bold text-brand-green text-sm">Quality Service</h4>
+                <p class="text-xs text-brand-muted mt-0.5">Hygienic and carefully packed.</p>
+              </div>
+            </div>
+            <div class="p-4 rounded-xl bg-white border border-brand-gold/20 shadow-sm flex items-start gap-3">
+              <div class="text-brand-gold text-xl mt-1"><i class="fa-brands fa-whatsapp text-emerald-600"></i></div>
+              <div>
+                <h4 class="font-bold text-brand-green text-sm">Easy Ordering</h4>
+                <p class="text-xs text-brand-muted mt-0.5">Direct chat ordering in seconds.</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="https://wa.me/2348160900277?text=Hello%20Aka%20Foods,%20I%20would%20like%20to%20make%20an%20inquiry." 
+             target="_blank" 
+             rel="noopener noreferrer"
+             class="inline-flex items-center gap-2 bg-brand-green hover:bg-brand-greenDark text-white font-bold px-7 py-3.5 rounded-full transition-all shadow-md">
+            <span>Talk to Us Directly</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================== -->
+  <!-- FOOD CATEGORIES SECTION                    -->
+  <!-- ========================================== -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-brand-creamDark border-y border-brand-gold/20">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+        <span class="text-brand-terracotta text-xs font-bold uppercase tracking-widest">Delicious Choices</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-green mt-1">Explore Our Food Categories</h2>
+        <div class="w-16 h-1 bg-brand-gold mx-auto mt-3 rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+        
+        <!-- Category Card 1 -->
+        <div class="group relative rounded-2xl overflow-hidden shadow-md cursor-pointer bg-white border border-brand-gold/20 hover:shadow-xl transition-all reveal">
+          <div class="h-36 sm:h-44 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?auto=format&fit=crop&w=500&q=80" alt="Nigerian Dishes" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          </div>
+          <div class="p-4 text-center">
+            <h3 class="font-bold text-brand-green text-base group-hover:text-brand-gold transition-colors">Nigerian Dishes</h3>
+            <p class="text-xs text-brand-muted mt-1">Authentic regional specialties</p>
+          </div>
+        </div>
+
+        <!-- Category Card 2 -->
+        <div class="group relative rounded-2xl overflow-hidden shadow-md cursor-pointer bg-white border border-brand-gold/20 hover:shadow-xl transition-all reveal">
+          <div class="h-36 sm:h-44 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=500&q=80" alt="Rice Dishes" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          </div>
+          <div class="p-4 text-center">
+            <h3 class="font-bold text-brand-green text-base group-hover:text-brand-gold transition-colors">Rice Dishes</h3>
+            <p class="text-xs text-brand-muted mt-1">Jollof, Fried, Ofada & Stew</p>
+          </div>
+        </div>
+
+        <!-- Category Card 3 -->
+        <div class="group relative rounded-2xl overflow-hidden shadow-md cursor-pointer bg-white border border-brand-gold/20 hover:shadow-xl transition-all reveal">
+          <div class="h-36 sm:h-44 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=500&q=80" alt="Soups & Swallow" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          </div>
+          <div class="p-4 text-center">
+            <h3 class="font-bold text-brand-green text-base group-hover:text-brand-gold transition-colors">Soups & Swallow</h3>
+            <p class="text-xs text-brand-muted mt-1">Rich Egusi, Ogbono & More</p>
+          </div>
+        </div>
+
+        <!-- Category Card 4 -->
+        <div class="group relative rounded-2xl overflow-hidden shadow-md cursor-pointer bg-white border border-brand-gold/20 hover:shadow-xl transition-all reveal">
+          <div class="h-36 sm:h-44 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=500&q=80" alt="Grills & BBQ" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          </div>
+          <div class="p-4 text-center">
+            <h3 class="font-bold text-brand-green text-base group-hover:text-brand-gold transition-colors">Grills & BBQ</h3>
+            <p class="text-xs text-brand-muted mt-1">Smoky, spiced meats & chicken</p>
+          </div>
+        </div>
+
+        <!-- Category Card 5 -->
+        <div class="group relative rounded-2xl overflow-hidden shadow-md cursor-pointer bg-white border border-brand-gold/20 hover:shadow-xl transition-all reveal">
+          <div class="h-36 sm:h-44 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1588168333986-5078d3ae3976?auto=format&fit=crop&w=500&q=80" alt="Chicken & Meat" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          </div>
+          <div class="p-4 text-center">
+            <h3 class="font-bold text-brand-green text-base group-hover:text-brand-gold transition-colors">Chicken & Meat</h3>
+            <p class="text-xs text-brand-muted mt-1">Tender peppered & fried portions</p>
+          </div>
+        </div>
+
+        <!-- Category Card 6 -->
+        <div class="group relative rounded-2xl overflow-hidden shadow-md cursor-pointer bg-white border border-brand-gold/20 hover:shadow-xl transition-all reveal">
+          <div class="h-36 sm:h-44 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=500&q=80" alt="Fish & Seafood" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          </div>
+          <div class="p-4 text-center">
+            <h3 class="font-bold text-brand-green text-base group-hover:text-brand-gold transition-colors">Fish & Seafood</h3>
+            <p class="text-xs text-brand-muted mt-1">Catfish pepper soup & croaker</p>
+          </div>
+        </div>
+
+        <!-- Category Card 7 -->
+        <div class="group relative rounded-2xl overflow-hidden shadow-md cursor-pointer bg-white border border-brand-gold/20 hover:shadow-xl transition-all reveal">
+          <div class="h-36 sm:h-44 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1621996346565-e3d5d6281288?auto=format&fit=crop&w=500&q=80" alt="Intercontinental" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          </div>
+          <div class="p-4 text-center">
+            <h3 class="font-bold text-brand-green text-base group-hover:text-brand-gold transition-colors">Intercontinental</h3>
+            <p class="text-xs text-brand-muted mt-1">Pasta specials, noodles & chips</p>
+          </div>
+        </div>
+
+        <!-- Category Card 8 -->
+        <div class="group relative rounded-2xl overflow-hidden shadow-md cursor-pointer bg-white border border-brand-gold/20 hover:shadow-xl transition-all reveal">
+          <div class="h-36 sm:h-44 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=500&q=80" alt="Drinks & Refreshments" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          </div>
+          <div class="p-4 text-center">
+            <h3 class="font-bold text-brand-green text-base group-hover:text-brand-gold transition-colors">Drinks</h3>
+            <p class="text-xs text-brand-muted mt-1">Chilled juices, sodas & water</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================== -->
+  <!-- FEATURED MENU & FILTER SECTION             -->
+  <!-- ========================================== -->
+  <section id="menu" class="py-20 px-4 sm:px-6 lg:px-8 bg-brand-cream">
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-10 reveal">
+        <span class="text-brand-terracotta text-xs font-bold uppercase tracking-widest">Freshly Prepared</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-brand-green mt-1">Our Special Menu</h2>
+        <p class="text-brand-muted text-sm mt-3">Select your favorite meal and place your order directly via WhatsApp.</p>
+        <div class="w-16 h-1 bg-brand-gold mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <!-- Category Filter Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12 reveal">
+        <button class="menu-filter-btn active bg-brand-green text-white font-semibold text-xs sm:text-sm px-5 py-2.5 rounded-full shadow-md border border-brand-green transition-all" data-filter="all">All Items</button>
+        <button class="menu-filter-btn bg-white text-brand-green hover:bg-brand-green/10 font-semibold text-xs sm:text-sm px-5 py-2.5 rounded-full border border-brand-gold/30 transition-all" data-filter="nigerian">Nigerian</button>
+        <button class="menu-filter-btn bg-white text-brand-green hover:bg-brand-green/10 font-semibold text-xs sm:text-sm px-5 py-2.5 rounded-full border border-brand-gold/30 transition-all" data-filter="rice">Rice Dishes</button>
+        <button class="menu-filter-btn bg-white text-brand-green hover:bg-brand-green/10 font-semibold text-xs sm:text-sm px-5 py-2.5 rounded-full border border-brand-gold/30 transition-all" data-filter="soups">Soups & Swallow</button>
+        <button class="menu-filter-btn bg-white text-brand-green hover:bg-brand-green/10 font-semibold text-xs sm:text-sm px-5 py-2.5 rounded-full border border-brand-gold/30 transition-all" data-filter="grills">Grills</button>
+        <button class="menu-filter-btn bg-white text-brand-green hover:bg-brand-green/10 font-semibold text-xs sm:text-sm px-5 py-2.5 rounded-full border border-brand-gold/30 transition-all" data-filter="intercontinental">Intercontinental</button>
+        <button class="menu-filter-btn bg-white text-brand-green hover:bg-brand-green/10 font-semibold text-xs sm:text-sm px-5 py-2.5 rounded-full border border-brand-gold/30 transition-all" data-filter="drinks">Drinks</button>
+      </div>
+
+      <!-- Food Menu Grid -->
+      <div id="menu-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
+        
+        <!-- Food Card 1 -->
+        <div class="menu-card bg-white rounded-2xl overflow-hidden shadow-lg border border-brand-gold/20 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-xl reveal" data-category="rice nigerian">
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80" alt="Jollof Rice & Chicken" class="w-full h-full object-cover">
+            <span class="absolute top-3 right-3 bg-brand-gold text-brand-greenDark font-extrabold text-xs px-3 py-1 rounded-full shadow-md">Popular</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-serif font-bold text-xl text-brand-green mb-1">Jollof Rice & Chicken</h3>
+              <p class="text-xs text-brand-muted leading-relaxed mb-4">Richly seasoned authentic Nigerian jollof rice served with crispy, perfectly grilled chicken piece and plantain.</p>
+            </div>
+            <div>
+              <div class="flex items-center justify-between mb-4 pt-3 border-t border-gray-100">
+                <span class="text-xs text-brand-muted uppercase font-semibold">Price</span>
+                <span class="font-extrabold text-lg text-brand-terracotta">₦5,000</span>
+              </div>
+              <button onclick="orderItem('Jollof Rice & Chicken')" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm py-2.5 px-4 rounded-xl shadow-md flex items-center justify-center gap-2 transition-colors">
+                <i class="fa-brands fa-whatsapp text-lg"></i> Order on WhatsApp
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Food Card 2 -->
+        <div class="menu-card bg-white rounded-2xl overflow-hidden shadow-lg border border-brand-gold/20 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-xl reveal" data-category="rice">
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=80" alt="Fried Rice & Chicken" class="w-full h-full object-cover">
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-serif font-bold text-xl text-brand-green mb-1">Fried Rice & Chicken</h3>
+              <p class="text-xs text-brand-muted leading-relaxed mb-4">Flavorful Nigerian fried rice cooked with fresh veggies, liver bits, and served with tender fried chicken.</p>
+            </div>
+            <div>
+              <div class="flex items-center justify-between mb-4 pt-3 border-t border-gray-100">
+                <span class="text-xs text-brand-muted uppercase font-semibold">Price</span>
+                <span class="font-extrabold text-lg text-brand-terracotta">₦5,000</span>
+              </div>
+              <button onclick="orderItem('Fried Rice & Chicken')" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm py-2.5 px-4 rounded-xl shadow-md flex items-center justify-center gap-2 transition-colors">
+                <i class="fa-brands fa-whatsapp text-lg"></i> Order on WhatsApp
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Food Card 3 -->
+        <div class="menu-card bg-white rounded-2xl overflow-hidden shadow-lg border border-brand-gold/20 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-xl reveal" data-category="rice nigerian">
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?auto=format&fit=crop&w=600&q=80" alt="Ofada Rice & Sauce" class="w-full h-full object-cover">
+            <span class="absolute top-3 right-3 bg-brand-terracotta text-white font-extrabold text-xs px-3 py-1 rounded-full shadow-md">Special</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-serif font-bold text-xl text-brand-green mb-1">Ofada Rice & Ayamase</h3>
+              <p class="text-xs text-brand-muted leading-relaxed mb-4">Local aromatic unpolished rice served with spicy green pepper Ayamase bleach sauce, boiled egg, and assorted meat.</p>
+            </div>
+            <div>
+              <div class="flex items-center justify-between mb-4 pt-3 border-t border-gray-100">
+                <span class="text-xs text-brand-muted uppercase font-semibold">Price</span>
+                <span class="font-extrabold text-lg text-brand-terracotta">₦6,500</span>
+              </div>
+              <button onclick="orderItem('Ofada Rice & Ayamase')" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm py-2.5 px-4 rounded-xl shadow-md flex items-center justify-center gap-2 transition-colors">
+                <i class="fa-brands fa-whatsapp text-lg"></i> Order on WhatsApp
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Food Card 4 -->
+        <div class="menu-card bg-white rounded-2xl overflow-hidden shadow-lg border border-brand-gold/20 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-xl reveal" data-category="soups nigerian">
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=600&q=80" alt="Egusi Soup & Pounded Yam" class="w-full h-full object-cover">
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-serif font-bold text-xl text-brand-green mb-1">Egusi Soup & Swallow</h3>
+              <p class="text-xs text-brand-muted leading-relaxed mb-4">Rich melon seed soup prepared with dried stockfish, bitter leaf, and assorted beef. Served with your choice of swallow.</p>
+            </div>
+            <div>
+              <div class="flex items-center justify-between mb-4 pt-3 border-t border-gray-100">
+                <span class="text-xs text-brand-muted uppercase font-semibold">Price</span>
+                <span class="font-extrabold text-lg text-brand-terracotta">₦5,500</span>
+              </div>
+              <button onclick="orderItem('Egusi Soup & Swallow')" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm py-2.5 px-4 rounded-xl shadow-md flex items-center justify-center gap-2 transition-colors">
+                <i class="fa-brands fa-whatsapp text-lg"></i> Order on WhatsApp
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Food Card 5 -->
+        <div class="menu-card bg-white rounded-2xl overflow-hidden shadow-lg border border-brand-gold/20 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-xl reveal" data-category="soups nigerian">
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?auto=format&fit=crop&w=600&q=80" alt="Ogbono Soup" class="w-full h-full object-cover">
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-serif font-bold text-xl text-brand-green mb-1">Ogbono Special Soup</h3>
+              <p class="text-xs text-brand-muted leading-relaxed mb-4">Slimy wild mango seed soup loaded with stockfish head, cow tripe, and traditional spices. Served hot with soft swallow.</p>
+            </div>
+            <div>
+              <div class="flex items-center justify-between mb-4 pt-3 border-t border-gray-100">
+                <span class="text-xs text-brand-muted uppercase font-semibold">Price</span>
+                <span class="font-extrabold text-lg text-brand-terracotta">₦5,500</span>
+              </div>
+              <button onclick="orderItem('Ogbono Special Soup')" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm py-2.5 px-4 rounded-xl shadow-md flex items-center justify-center gap-2 transition-colors">
+                <i class="fa-brands fa-whatsapp text-lg"></i> Order on WhatsApp
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Food Card 6 -->
+        <div class="menu-card bg-white rounded-2xl overflow-hidden shadow-lg border border-brand-gold/20 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-xl reveal" data-category="grills nigerian">
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80" alt="Catfish Pepper Soup" class="w-full h-full object-cover">
+            <span class="absolute top-3 right-3 bg-brand-gold text-brand-greenDark font-extrabold text-xs px-3 py-1 rounded-full shadow-md">Hot</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-serif font-bold text-xl text-brand-green mb-1">Catfish Pepper Soup</h3>
+              <p class="text-xs text-brand-muted leading-relaxed mb-4">Fresh point-and-kill catfish simmered in aromatic spicy Igbo pepper soup broth with scent leaves.</p>
+            </div>
+            <div>
+              <div class="flex items-center justify-between mb-4 pt-3 border-t border-gray-100">
+                <span class="text-xs text-brand-muted uppercase font-semibold">Price</span>
+                <span class="font-extrabold text-lg text-brand-terracotta">₦7,000</span>
+              </div>
+              <button onclick="orderItem('Catfish Pepper Soup')" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm py-2.5 px-4 rounded-xl shadow-md flex items-center justify-center gap-2 transition-colors">
+                <i class="fa-brands fa-whatsapp text-lg"></i> Order on WhatsApp
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Food Card 7 -->
+        <div class="menu-card bg-white rounded-2xl overflow-hidden shadow-lg border border-brand-gold/20 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-xl reveal" data-category="grills">
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=600&q=80" alt="Barbecue Grilled Chicken" class="w-full h-full object-cover">
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-serif font-bold text-xl text-brand-green mb-1">Full Grilled Chicken</h3>
+              <p class="text-xs text-brand-muted leading-relaxed mb-4">Whole slow-roasted charcoal grilled chicken marinated in Suya spicy glaze. Served with fresh cabbage and spicy dip.</p>
+            </div>
+            <div>
+              <div class="flex items-center justify-between mb-4 pt-3 border-t border-gray-100">
+                <span class="text-xs text-brand-muted uppercase font-semibold">Price</span>
+                <span class="font-extrabold text-lg text-brand-terracotta">₦12,000</span>
+              </div>
+              <button onclick="orderItem('Full Grilled Chicken')" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm py-2.5 px-4 rounded-xl shadow-md flex items-center justify-center gap-2 transition-colors">
+                <i class="fa-brands fa-whatsapp text-lg"></i> Order on WhatsApp
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Food Card 8 -->
+        <div class="menu-card bg-white rounded-2xl overflow-hidden shadow-lg border border-brand-gold/20 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-xl reveal" data-category="intercontinental">
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1621996346565-e3d5d6281288?auto=format&fit=crop&w=600&q=80" alt="Creamy Pasta Special" class="w-full h-full object-cover">
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-serif font-bold text-xl text-brand-green mb-1">Creamy Seafood Pasta</h3>
+              <p class="text-xs text-brand-muted leading-relaxed mb-4">Penne pasta tossed in rich garlic cream sauce, grilled prawns, sausage slices, and parmesan cheese.</p>
+            </div>
+            <div>
+              <div class="flex items-center justify-between mb-4 pt-3 border-t border-gray-100">
+                <span class="text-xs text-brand-muted uppercase font-semibold">Price</span>
+                <span class="font-extrabold text-lg text-brand-terracotta">₦8,000</span>
+              </div>
+              <button onclick="orderItem('Creamy Seafood Pasta')" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm py-2.5 px-4 rounded-xl shadow-md flex items-center justify-center gap-2 transition-colors">
+                <i class="fa-brands fa-whatsapp text-lg"></i> Order on WhatsApp
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Food Card 9 -->
+        <div class="menu-card bg-white rounded-2xl overflow-hidden shadow-lg border border-brand-gold/20 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-xl reveal" data-category="drinks">
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80" alt="Fresh Fruit Juice & Drinks" class="w-full h-full object-cover">
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-serif font-bold text-xl text-brand-green mb-1">Chilled Zobo / Fruit Juice</h3>
+              <p class="text-xs text-brand-muted leading-relaxed mb-4">Refreshing organic hibiscus Zobo drink infused with pineapple, ginger, and mint leaves.</p>
+            </div>
+            <div>
+              <div class="flex items-center justify-between mb-4 pt-3 border-t border-gray-100">
+                <span class="text-xs text-brand-muted uppercase font-semibold">Price</span>
+                <span class="font-extrabold text-lg text-brand-terracotta">₦1,500</span>
+              </div>
+              <button onclick="orderItem('Chilled Zobo / Fruit Juice')" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm py-2.5 px-4 rounded-xl shadow-md flex items-center justify-center gap-2 transition-colors">
+                <i class="fa-brands fa-whatsapp text-lg"></i> Order on WhatsApp
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================== -->
+  <!-- WHY CHOOSE AKA FOODS                       -->
+  <!-- ========================================== -->
+  <section id="why-us" class="py-20 px-4 sm:px-6 lg:px-8 bg-brand-green text-brand-cream relative overflow-hidden bg-pattern">
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+        <span class="text-brand-gold text-xs font-bold uppercase tracking-widest">Our Commitment</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold mt-1 text-white">Why Choose Aka Foods?</h2>
+        <div class="w-16 h-1 bg-brand-gold mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Feature 1 -->
+        <div class="p-8 rounded-2xl bg-brand-greenDark/80 border border-brand-gold/20 hover:border-brand-gold/60 transition-all transform hover:-translate-y-1 shadow-xl reveal">
+          <div class="w-14 h-14 rounded-2xl bg-brand-gold/10 text-brand-gold flex items-center justify-center text-2xl mb-6 border border-brand-gold/30">
+            <i class="fa-solid fa-carrot"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-brand-cream mb-3">Fresh Ingredients</h3>
+          <p class="text-sm text-brand-cream/80 leading-relaxed">
+            We carefully select top-grade fresh vegetables, meats, and traditional spices daily to preserve rich nutritional flavor.
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="p-8 rounded-2xl bg-brand-greenDark/80 border border-brand-gold/20 hover:border-brand-gold/60 transition-all transform hover:-translate-y-1 shadow-xl reveal">
+          <div class="w-14 h-14 rounded-2xl bg-brand-gold/10 text-brand-gold flex items-center justify-center text-2xl mb-6 border border-brand-gold/30">
+            <i class="fa-solid fa-pepper-hot"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-brand-cream mb-3">Authentic Taste</h3>
+          <p class="text-sm text-brand-cream/80 leading-relaxed">
+            Our recipes honor genuine Nigerian culinary heritage. Every bite delivers traditional warmth and rich aromatic goodness.
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="p-8 rounded-2xl bg-brand-greenDark/80 border border-brand-gold/20 hover:border-brand-gold/60 transition-all transform hover:-translate-y-1 shadow-xl reveal">
+          <div class="w-14 h-14 rounded-2xl bg-brand-gold/10 text-brand-gold flex items-center justify-center text-2xl mb-6 border border-brand-gold/30">
+            <i class="fa-solid fa-utensils"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-brand-cream mb-3">Wide Menu Variety</h3>
+          <p class="text-sm text-brand-cream/80 leading-relaxed">
+            From local soups and swallows to pasta and continental dishes, we have delicious choices tailored for every family member.
+          </p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="p-8 rounded-2xl bg-brand-greenDark/80 border border-brand-gold/20 hover:border-brand-gold/60 transition-all transform hover:-translate-y-1 shadow-xl reveal">
+          <div class="w-14 h-14 rounded-2xl bg-brand-gold/10 text-brand-gold flex items-center justify-center text-2xl mb-6 border border-brand-gold/30">
+            <i class="fa-solid fa-wallet"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-brand-cream mb-3">Affordable Pricing</h3>
+          <p class="text-sm text-brand-cream/80 leading-relaxed">
+            Enjoy generous food portion sizes and restaurant-quality dining at prices that deliver maximum value for your money.
+          </p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="p-8 rounded-2xl bg-brand-greenDark/80 border border-brand-gold/20 hover:border-brand-gold/60 transition-all transform hover:-translate-y-1 shadow-xl reveal">
+          <div class="w-14 h-14 rounded-2xl bg-brand-gold/10 text-brand-gold flex items-center justify-center text-2xl mb-6 border border-brand-gold/30">
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-brand-cream mb-3">Instant WhatsApp Order</h3>
+          <p class="text-sm text-brand-cream/80 leading-relaxed">
+            Skip complex apps and payment checkouts. Order directly in seconds through a simple WhatsApp conversation.
+          </p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="p-8 rounded-2xl bg-brand-greenDark/80 border border-brand-gold/20 hover:border-brand-gold/60 transition-all transform hover:-translate-y-1 shadow-xl reveal">
+          <div class="w-14 h-14 rounded-2xl bg-brand-gold/10 text-brand-gold flex items-center justify-center text-2xl mb-6 border border-brand-gold/30">
+            <i class="fa-solid fa-truck-fast"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-brand-cream mb-3">Fast & Clean Delivery</h3>
+          <p class="text-sm text-brand-cream/80 leading-relaxed">
+            Packaged securely in food-grade insulated containers and delivered promptly anywhere within Awka town.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================== -->
+  <!-- SPECIAL CTA BANNER                         -->
+  <!-- ========================================== -->
+  <section class="relative py-20 px-4 sm:px-6 lg:px-8 bg-brand-terracotta text-white overflow-hidden">
+    <!-- Background Image with Overlay -->
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=80" alt="Craving Delicious Food" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-brand-terracotta/90 backdrop-blur-xs"></div>
+    </div>
+
+    <div class="relative z-10 max-w-4xl mx-auto text-center reveal">
+      <span class="inline-block bg-white/20 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-4">Awka's Favorite Food Hub</span>
+      <h2 class="font-serif text-3xl sm:text-5xl font-extrabold mb-4 text-white">Craving Something Delicious Today?</h2>
+      <p class="text-base sm:text-lg text-white/90 max-w-2xl mx-auto mb-8 leading-relaxed">
+        Your next unforgettable meal is just a quick WhatsApp message away. Tell us what you want to eat right now!
+      </p>
+      <a href="https://wa.me/2348160900277?text=Hello%20Aka%20Foods,%20I%20would%20like%20to%20place%20an%20order." 
+         target="_blank" 
+         rel="noopener noreferrer"
+         class="inline-flex items-center gap-3 bg-brand-gold hover:bg-brand-goldHover text-brand-greenDark font-extrabold text-lg px-8 py-4 rounded-full shadow-2xl transition-all transform hover:scale-105">
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+        <span>Order Now on WhatsApp</span>
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ========================================== -->
+  <!-- BANK TRANSFER / ORDERING STEPS SECTION     -->
+  <!-- ========================================== -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-brand-cream border-b border-brand-gold/20">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+        <span class="text-brand-terracotta text-xs font-bold uppercase tracking-widest">Simple & Transparent</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-green mt-1">Easy Ordering & Payment</h2>
+        <p class="text-xs sm:text-sm text-brand-muted mt-2">How to place your order and complete payment seamlessly</p>
+        <div class="w-16 h-1 bg-brand-gold mx-auto mt-3 rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+        <!-- Step 1 -->
+        <div class="bg-white p-6 rounded-2xl border border-brand-gold/20 text-center relative shadow-sm reveal">
+          <div class="w-10 h-10 rounded-full bg-brand-gold text-brand-green font-bold text-lg flex items-center justify-center mx-auto mb-4">1</div>
+          <h3 class="font-bold text-brand-green mb-2">Choose Your Meal</h3>
+          <p class="text-xs text-brand-muted leading-relaxed">Browse our online menu and select the dishes you desire.</p>
+        </div>
+        <!-- Step 2 -->
+        <div class="bg-white p-6 rounded-2xl border border-brand-gold/20 text-center relative shadow-sm reveal">
+          <div class="w-10 h-10 rounded-full bg-brand-gold text-brand-green font-bold text-lg flex items-center justify-center mx-auto mb-4">2</div>
+          <h3 class="font-bold text-brand-green mb-2">Order on WhatsApp</h3>
+          <p class="text-xs text-brand-muted leading-relaxed">Click "Order on WhatsApp" to send us your meal order automatically.</p>
+        </div>
+        <!-- Step 3 -->
+        <div class="bg-white p-6 rounded-2xl border border-brand-gold/20 text-center relative shadow-sm reveal">
+          <div class="w-10 h-10 rounded-full bg-brand-gold text-brand-green font-bold text-lg flex items-center justify-center mx-auto mb-4">3</div>
+          <h3 class="font-bold text-brand-green mb-2">Receive Details</h3>
+          <p class="text-xs text-brand-muted leading-relaxed">Our representative confirms your total and sends payment account details.</p>
+        </div>
+        <!-- Step 4 -->
+        <div class="bg-white p-6 rounded-2xl border border-brand-gold/20 text-center relative shadow-sm reveal">
+          <div class="w-10 h-10 rounded-full bg-brand-gold text-brand-green font-bold text-lg flex items-center justify-center mx-auto mb-4">4</div>
+          <h3 class="font-bold text-brand-green mb-2">Transfer & Confirm</h3>
+          <p class="text-xs text-brand-muted leading-relaxed">Make your transfer, share receipt, and receive your fresh meal!</p>
+        </div>
+      </div>
+
+      <!-- Bank Transfer Details Placeholder Box -->
+      <div class="max-w-xl mx-auto bg-brand-greenDark text-brand-cream p-6 sm:p-8 rounded-2xl shadow-xl border border-brand-gold/30 text-center reveal">
+        <div class="flex items-center justify-center gap-2 text-brand-gold font-bold text-sm uppercase tracking-wider mb-4">
+          <i class="fa-solid fa-building-columns"></i>
+          <span>Official Payment Information</span>
+        </div>
+        <p class="text-xs text-brand-cream/80 mb-6 leading-relaxed">
+          Payment is accepted via <strong>Direct Bank Transfer</strong>. Official details are provided below and via WhatsApp upon placing an order:
+        </p>
+        
+        <div class="bg-brand-green/60 p-4 rounded-xl border border-white/10 space-y-2 text-left text-sm max-w-sm mx-auto">
+          <div class="flex justify-between border-b border-white/10 pb-2">
+            <span class="text-brand-cream/70">Bank Name:</span>
+            <span class="font-bold text-brand-gold">[Bank Name]</span>
+          </div>
+          <div class="flex justify-between border-b border-white/10 pb-2">
+            <span class="text-brand-cream/70">Account Name:</span>
+            <span class="font-bold text-white">Aka Foods</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-brand-cream/70">Account Number:</span>
+            <span class="font-mono font-bold text-brand-gold">[Account Number]</span>
+          </div>
+        </div>
+        <p class="text-[11px] text-brand-gold/80 italic mt-4">* Always verify order total with Aka Foods team before initiating transfers.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================== -->
+  <!-- GALLERY SECTION                            -->
+  <!-- ========================================== -->
+  <section id="gallery" class="py-20 px-4 sm:px-6 lg:px-8 bg-brand-cream">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+        <span class="text-brand-terracotta text-xs font-bold uppercase tracking-widest">Visual Feast</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-brand-green mt-1">Our Food Gallery</h2>
+        <p class="text-xs sm:text-sm text-brand-muted mt-2">Take a glimpse at our appetizing creations and atmosphere.</p>
+        <div class="w-16 h-1 bg-brand-gold mx-auto mt-3 rounded-full"></div>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+        
+        <div onclick="openLightbox('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1200&q=80')" class="group relative h-48 sm:h-60 rounded-2xl overflow-hidden cursor-pointer shadow-md reveal">
+          <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80" alt="Jollof Rice Platter" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-brand-green/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+            <i class="fa-solid fa-magnifying-glass-plus text-2xl"></i>
+          </div>
+        </div>
+
+        <div onclick="openLightbox('https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=1200&q=80')" class="group relative h-48 sm:h-60 rounded-2xl overflow-hidden cursor-pointer shadow-md reveal">
+          <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=80" alt="Fried Rice Delicacy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-brand-green/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+            <i class="fa-solid fa-magnifying-glass-plus text-2xl"></i>
+          </div>
+        </div>
+
+        <div onclick="openLightbox('https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=1200&q=80')" class="group relative h-48 sm:h-60 rounded-2xl overflow-hidden cursor-pointer shadow-md reveal">
+          <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=600&q=80" alt="Traditional Igbo Soup" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-brand-green/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+            <i class="fa-solid fa-magnifying-glass-plus text-2xl"></i>
+          </div>
+        </div>
+
+        <div onclick="openLightbox('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1200&q=80')" class="group relative h-48 sm:h-60 rounded-2xl overflow-hidden cursor-pointer shadow-md reveal">
+          <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80" alt="Spiced BBQ Meat" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-brand-green/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+            <i class="fa-solid fa-magnifying-glass-plus text-2xl"></i>
+          </div>
+        </div>
+
+        <div onclick="openLightbox('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80')" class="group relative h-48 sm:h-60 rounded-2xl overflow-hidden cursor-pointer shadow-md reveal">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Assorted Platter" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-brand-green/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+            <i class="fa-solid fa-magnifying-glass-plus text-2xl"></i>
+          </div>
+        </div>
+
+        <div onclick="openLightbox('https://images.unsplash.com/photo-1588168333986-5078d3ae3976?auto=format&fit=crop&w=1200&q=80')" class="group relative h-48 sm:h-60 rounded-2xl overflow-hidden cursor-pointer shadow-md reveal">
+          <img src="https://images.unsplash.com/photo-1588168333986-5078d3ae3976?auto=format&fit=crop&w=600&q=80" alt="Peppered Chicken Portion" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-brand-green/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+            <i class="fa-solid fa-magnifying-glass-plus text-2xl"></i>
+          </div>
+        </div>
+
+        <div onclick="openLightbox('https://images.unsplash.com/photo-1621996346565-e3d5d6281288?auto=format&fit=crop&w=1200&q=80')" class="group relative h-48 sm:h-60 rounded-2xl overflow-hidden cursor-pointer shadow-md reveal">
+          <img src="https://images.unsplash.com/photo-1621996346565-e3d5d6281288?auto=format&fit=crop&w=600&q=80" alt="Pasta & Sauces" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-brand-green/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+            <i class="fa-solid fa-magnifying-glass-plus text-2xl"></i>
+          </div>
+        </div>
+
+        <div onclick="openLightbox('https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=1200&q=80')" class="group relative h-48 sm:h-60 rounded-2xl overflow-hidden cursor-pointer shadow-md reveal">
+          <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80" alt="Chilled Refreshments" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-brand-green/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+            <i class="fa-solid fa-magnifying-glass-plus text-2xl"></i>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal Container -->
+  <div id="lightbox-modal" class="fixed inset-0 z-[10000] bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-4">
+    <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white text-3xl hover:text-brand-gold focus:outline-none z-10" aria-label="Close Lightbox">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <img id="lightbox-img" src="" alt="Enlarged Food View" class="max-w-full max-h-[85vh] rounded-xl shadow-2xl object-contain">
+  </div>
+
+
+  <!-- ========================================== -->
+  <!-- TESTIMONIALS SECTION                       -->
+  <!-- ========================================== -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-brand-creamDark border-y border-brand-gold/20">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+        <span class="text-brand-terracotta text-xs font-bold uppercase tracking-widest">Customer Feedback</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-brand-green mt-1">What Our Customers Say</h2>
+        <div class="w-16 h-1 bg-brand-gold mx-auto mt-3 rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Testimonial 1 -->
+        <div class="bg-white p-8 rounded-2xl shadow-md border border-brand-gold/20 flex flex-col justify-between relative reveal">
+          <i class="fa-solid fa-quote-left text-4xl text-brand-gold/30 absolute top-6 right-6"></i>
+          <div class="mb-6">
+            <div class="flex text-brand-gold text-sm gap-1 mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-sm text-brand-muted leading-relaxed italic">
+              "Absolutely delicious! The Jollof Rice and grilled chicken were so flavor-packed and fresh. Ordering on WhatsApp was super seamless. I'll definitely be back!"
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
+            <div class="w-10 h-10 rounded-full bg-brand-green text-brand-gold flex items-center justify-center font-bold">
+              CE
+            </div>
+            <div>
+              <h4 class="font-bold text-brand-green text-sm">Chinedu E.</h4>
+              <p class="text-xs text-brand-muted">Resident in Awka</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-white p-8 rounded-2xl shadow-md border border-brand-gold/20 flex flex-col justify-between relative reveal">
+          <i class="fa-solid fa-quote-left text-4xl text-brand-gold/30 absolute top-6 right-6"></i>
+          <div class="mb-6">
+            <div class="flex text-brand-gold text-sm gap-1 mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-sm text-brand-muted leading-relaxed italic">
+              "Their Egusi Soup tastes exactly like authentic home cooking! Delivery was fast and the food arrived piping hot. Aka Foods is my go-to restaurant now."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
+            <div class="w-10 h-10 rounded-full bg-brand-terracotta text-white flex items-center justify-center font-bold">
+              AO
+            </div>
+            <div>
+              <h4 class="font-bold text-brand-green text-sm">Amaka O.</h4>
+              <p class="text-xs text-brand-muted">Unizik Campus, Awka</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="bg-white p-8 rounded-2xl shadow-md border border-brand-gold/20 flex flex-col justify-between relative reveal">
+          <i class="fa-solid fa-quote-left text-4xl text-brand-gold/30 absolute top-6 right-6"></i>
+          <div class="mb-6">
+            <div class="flex text-brand-gold text-sm gap-1 mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-sm text-brand-muted leading-relaxed italic">
+              "Clean packaging, excellent customer service on WhatsApp, and generous portions. The catfish pepper soup was well spiced and cured my cravings."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
+            <div class="w-10 h-10 rounded-full bg-brand-gold text-brand-green flex items-center justify-center font-bold">
+              KN
+            </div>
+            <div>
+              <h4 class="font-bold text-brand-green text-sm">Kene N.</h4>
+              <p class="text-xs text-brand-muted">Awka Business Executive</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================== -->
+  <!-- LOCATION & CONTACT SECTION                 -->
+  <!-- ========================================== -->
+  <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 bg-brand-cream">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+        <span class="text-brand-terracotta text-xs font-bold uppercase tracking-widest">Get In Touch</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-brand-green mt-1">Visit or Contact Us</h2>
+        <div class="w-16 h-1 bg-brand-gold mx-auto mt-3 rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+        
+        <!-- Contact Cards Container -->
+        <div class="flex flex-col justify-between space-y-6 reveal">
+          
+          <div class="p-6 rounded-2xl bg-white border border-brand-gold/20 shadow-md flex items-start gap-4">
+            <div class="w-12 h-12 rounded-full bg-brand-green text-brand-gold flex items-center justify-center text-xl shrink-0">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-brand-green text-lg mb-1">Our Location</h3>
+              <p class="text-sm text-brand-muted leading-relaxed">Awka, Anambra State, Nigeria</p>
+              <span class="text-xs text-brand-gold font-semibold mt-1 inline-block">* Full street address provided on order confirmation</span>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-white border border-brand-gold/20 shadow-md flex items-start gap-4">
+            <div class="w-12 h-12 rounded-full bg-brand-green text-brand-gold flex items-center justify-center text-xl shrink-0">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-brand-green text-lg mb-1">Phone / WhatsApp</h3>
+              <p class="text-sm text-brand-muted leading-relaxed">08160900277</p>
+              <p class="text-xs text-brand-muted mt-1">Available for WhatsApp Orders & Inquiries</p>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-white border border-brand-gold/20 shadow-md flex items-start gap-4">
+            <div class="w-12 h-12 rounded-full bg-brand-green text-brand-gold flex items-center justify-center text-xl shrink-0">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-brand-green text-lg mb-1">Email Address</h3>
+              <p class="text-sm text-brand-muted leading-relaxed">akafoods@gmail.com</p>
+              <p class="text-xs text-brand-muted mt-1">Send us your feedback or corporate catering requests</p>
+            </div>
+          </div>
+
+          <!-- Main Direct WhatsApp Contact CTA -->
+          <a href="https://wa.me/2348160900277?text=Hello%20Aka%20Foods,%20I%20would%20like%20to%20place%20an%20order." 
+             target="_blank" 
+             rel="noopener noreferrer"
+             class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 px-6 rounded-2xl shadow-xl flex items-center justify-center gap-3 transition-all transform hover:-translate-y-0.5 text-lg">
+            <i class="fa-brands fa-whatsapp text-2xl"></i>
+            <span>Chat With Us on WhatsApp</span>
+          </a>
+
+        </div>
+
+        <!-- Google Maps Embed Placeholder -->
+        <div class="rounded-2xl overflow-hidden shadow-xl border-2 border-brand-gold/30 h-[380px] lg:h-auto min-h-[350px] relative reveal">
+          <iframe 
+            title="Aka Foods Awka Location Map" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63435.0347898516!2d7.034720950000001!3d6.21043345!2m3!1f0!2f0!3f0!2m3!1i1024!2i768!4f13.1!3m3!1m2!1s0x104392f40b2b8c9d%3A0x6b7bd469279db04b!2sAwka%2C%20Anambra!5e0!3m2!1sen!2sng!4v1690000000000!5m2!1sen!2sng" 
+            class="w-full h-full border-0" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================== -->
+  <!-- FOOTER SECTION                             -->
+  <!-- ========================================== -->
+  <footer class="bg-brand-greenDark text-brand-cream border-t border-brand-gold/30 pt-16 pb-8 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        
+        <!-- Col 1: Brand Info -->
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-full bg-brand-gold flex items-center justify-center text-brand-green font-bold text-lg">
+              <i class="fa-solid fa-bowl-food"></i>
+            </div>
+            <span class="font-serif text-2xl font-bold tracking-tight text-white">AKA FOODS</span>
+          </div>
+          <p class="text-xs text-brand-cream/80 leading-relaxed mb-6">
+            Delicious local Nigerian and intercontinental meals prepared with love and high hygiene standards in Awka, Anambra State.
+          </p>
+          <div class="flex gap-3">
+            <a href="#" class="w-9 h-9 rounded-full bg-brand-green flex items-center justify-center text-brand-cream hover:bg-brand-gold hover:text-brand-green transition-colors" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="#" class="w-9 h-9 rounded-full bg-brand-green flex items-center justify-center text-brand-cream hover:bg-brand-gold hover:text-brand-green transition-colors" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" class="w-9 h-9 rounded-full bg-brand-green flex items-center justify-center text-brand-cream hover:bg-brand-gold hover:text-brand-green transition-colors" aria-label="TikTok">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a href="https://wa.me/2348160900277" target="_blank" class="w-9 h-9 rounded-full bg-brand-green flex items-center justify-center text-brand-cream hover:bg-emerald-600 transition-colors" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4 class="font-serif font-bold text-lg text-brand-gold mb-4 border-b border-white/10 pb-2">Quick Links</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#home" class="hover:text-brand-gold transition-colors">Home</a></li>
+            <li><a href="#about" class="hover:text-brand-gold transition-colors">About Aka Foods</a></li>
+            <li><a href="#menu" class="hover:text-brand-gold transition-colors">Food Menu</a></li>
+            <li><a href="#why-us" class="hover:text-brand-gold transition-colors">Why Choose Us</a></li>
+            <li><a href="#gallery" class="hover:text-brand-gold transition-colors">Photo Gallery</a></li>
+            <li><a href="#contact" class="hover:text-brand-gold transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Contact Info -->
+        <div>
+          <h4 class="font-serif font-bold text-lg text-brand-gold mb-4 border-b border-white/10 pb-2">Reach Us</h4>
+          <ul class="space-y-3 text-xs text-brand-cream/80">
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-location-dot text-brand-gold mt-0.5"></i>
+              <span>Awka, Anambra State, Nigeria</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-phone text-brand-gold"></i>
+              <span>08160900277</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-envelope text-brand-gold"></i>
+              <span>akafoods@gmail.com</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-clock text-brand-gold"></i>
+              <span>Mon - Sat: 8:00 AM - 9:00 PM</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Quick Order -->
+        <div>
+          <h4 class="font-serif font-bold text-lg text-brand-gold mb-4 border-b border-white/10 pb-2">Order With Us</h4>
+          <p class="text-xs text-brand-cream/80 mb-4 leading-relaxed">
+            Ready for a delicious meal delivered straight to your door? Click below to order immediately.
+          </p>
+          <a href="https://wa.me/2348160900277?text=Hello%20Aka%20Foods,%20I%20would%20like%20to%20place%20an%20order." 
+             target="_blank" 
+             rel="noopener noreferrer"
+             class="inline-flex items-center justify-center gap-2 w-full bg-brand-gold hover:bg-brand-goldHover text-brand-greenDark font-bold py-3 px-4 rounded-xl shadow-md text-xs transition-colors">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span>Order on WhatsApp</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-brand-cream/60 text-center gap-2">
+        <p>© 2026 Aka Foods. All Rights Reserved.</p>
+        <p>Designed by <span class="text-brand-gold font-semibold">Harryscope Digital Solutions</span></p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ========================================== -->
+  <!-- FLOATING BUTTONS                           -->
+  <!-- ========================================== -->
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/2348160900277?text=Hello%20Aka%20Foods,%20I%20would%20like%20to%20place%20an%20order." 
+     target="_blank" 
+     rel="noopener noreferrer"
+     class="fixed bottom-6 right-6 z-40 bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl whatsapp-pulse transition-transform hover:scale-110 group"
+     aria-label="Order on WhatsApp">
+    <i class="fa-brands fa-whatsapp text-3xl"></i>
+    <!-- Tooltip -->
+    <span class="absolute right-16 bg-brand-greenDark text-white text-xs font-bold px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-xl border border-brand-gold/30 pointer-events-none">
+      Order on WhatsApp
+    </span>
+  </a>
+
+  <!-- Floating Back To Top Button -->
+  <button id="back-to-top" 
+          onclick="scrollToTop()" 
+          class="fixed bottom-24 right-6 z-40 bg-brand-green text-brand-gold w-10 h-10 rounded-full flex items-center justify-center shadow-xl border border-brand-gold/40 opacity-0 pointer-events-none transition-all duration-300 hover:bg-brand-greenDark hover:scale-110"
+          aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+
+  <!-- ========================================== -->
+  <!-- JAVASCRIPT FUNCTIONALITY                   -->
+  <!-- ========================================== -->
+  <script>
+    // ----------------------------------------------------
+    // PRELOADER DISMISSAL
+    // ----------------------------------------------------
+    window.addEventListener('load', () => {
+      const preloader = document.getElementById('preloader');
+      setTimeout(() => {
+        preloader.style.opacity = '0';
+        preloader.style.visibility = 'hidden';
+      }, 600);
+    });
+
+    // ----------------------------------------------------
+    // NAVBAR SCROLL BEHAVIOR & LOGO COLOR TOGGLE
+    // ----------------------------------------------------
+    const navbar = document.getElementById('navbar');
+    const navLogoText = document.getElementById('nav-logo-text');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const backToTopBtn = document.getElementById('back-to-top');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('bg-brand-cream/95', 'backdrop-blur-md', 'shadow-md', 'py-3');
+        navbar.classList.remove('py-4');
+        navLogoText.classList.remove('text-white');
+        navLogoText.classList.add('text-brand-green');
+        
+        navLinks.forEach(link => {
+          link.classList.remove('text-white');
+          link.classList.add('text-brand-green');
+        });
+        
+        backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+        backToTopBtn.classList.add('opacity-100', 'pointer-events-auto');
+      } else {
+        navbar.classList.remove('bg-brand-cream/95', 'backdrop-blur-md', 'shadow-md', 'py-3');
+        navbar.classList.add('py-4');
+        navLogoText.classList.add('text-white');
+        navLogoText.classList.remove('text-brand-green');
+        
+        navLinks.forEach(link => {
+          link.classList.add('text-white');
+          link.classList.remove('text-brand-green');
+        });
+
+        backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+        backToTopBtn.classList.remove('opacity-100', 'pointer-events-auto');
+      }
+    });
+
+    // ----------------------------------------------------
+    // MOBILE NAVIGATION DRAWER TOGGLE
+    // ----------------------------------------------------
+    function toggleMobileMenu() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('translate-x-full');
+    }
+
+    document.getElementById('mobile-menu-btn').addEventListener('click', toggleMobileMenu);
+
+    // ----------------------------------------------------
+    // WHATSAPP ORDER GENERATOR FUNCTION
+    // ----------------------------------------------------
+    const WHATSAPP_NUMBER = "2348160900277";
+
+    function orderItem(foodName) {
+      const message = `Hello Aka Foods, I would like to order:
+Food: ${foodName}
+Quantity: 1
+Please provide the total amount and payment details.`;
+      
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+      window.open(whatsappUrl, '_blank');
+    }
+
+    // ----------------------------------------------------
+    // MENU CATEGORY FILTERING SYSTEM
+    // ----------------------------------------------------
+    const filterBtns = document.querySelectorAll('.menu-filter-btn');
+    const menuCards = document.querySelectorAll('.menu-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Active button styles
+        filterBtns.forEach(b => {
+          b.classList.remove('active', 'bg-brand-green', 'text-white');
+          b.classList.add('bg-white', 'text-brand-green');
+        });
+        btn.classList.add('active', 'bg-brand-green', 'text-white');
+        btn.classList.remove('bg-white', 'text-brand-green');
+
+        const filterValue = btn.getAttribute('data-filter');
+
+        menuCards.forEach(card => {
+          const categories = card.getAttribute('data-category');
+          
+          if (filterValue === 'all' || categories.includes(filterValue)) {
+            card.style.display = 'flex';
+            setTimeout(() => {
+              card.style.opacity = '1';
+              card.style.transform = 'translateY(0)';
+            }, 50);
+          } else {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            setTimeout(() => {
+              card.style.display = 'none';
+            }, 300);
+          }
+        });
+      });
+    });
+
+    // ----------------------------------------------------
+    // LIGHTBOX GALLERY MODAL
+    // ----------------------------------------------------
+    const lightboxModal = document.getElementById('lightbox-modal');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    function openLightbox(imgSrc) {
+      lightboxImg.src = imgSrc;
+      lightboxModal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightboxModal.classList.add('hidden');
+      lightboxImg.src = '';
+      document.body.style.overflow = 'auto';
+    }
+
+    lightboxModal.addEventListener('click', (e) => {
+      if (e.target === lightboxModal) {
+        closeLightbox();
+      }
+    });
+
+    // ----------------------------------------------------
+    // SCROLL REVEAL ANIMATIONS (INTERSECTION OBSERVER)
+    // ----------------------------------------------------
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.15
+    };
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach(el => {
+      revealObserver.observe(el);
+    });
+
+    // ----------------------------------------------------
+    // BACK TO TOP SMOOTH SCROLL
+    // ----------------------------------------------------
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+  </script>
+
+</body>
+</html>
